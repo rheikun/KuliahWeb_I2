@@ -5,41 +5,56 @@
 </head>
 
 <body>
+    <!-- Menggunakan pemformatan tabel dengan border tabel 0 -->
     <form action="" method="post">
         <table border="0">
     
+    <!-- Dibawah ini adalah isi dari formulir -->
+    <!-- Row 1 -->
     <tr>
         <td>Nama Lengkap :</td>
-        <td><input type="text" name="nama" placeholder="Masukkan Nama Lengkap Anda" required/></td>
+        <!-- Placeholder digunakan untuk memberi keterangan pada input box-->
+        <td><input type="text" name="nama" placeholder="Masukkan Nama Lengkap Anda" required/></td> <!-- Required digunakan agar user tidak mengirim form dengan blank space (jadi tiap baris harus diisi) -->
     </tr>
 
+    <!-- Row 2 -->
     <tr>
         <td>Username :</td>
         <td><input type="text" name="username" placeholder="Masukkan Username" required /></td>
     </tr>
 
+    <!-- Row 3 -->
     <tr>
         <td>Password :</td>
+        <!-- Type "password" ini memberikan keamanan kepada user dalam memasukkan passwordnya, karena password yang diinput tidak diperlihatkan atau disamarkan  -->
         <td><input type="password" name="password" placeholder="Masukkan Password" required></td>
     </tr>
 
+    <!-- Row 4 -->
     <tr>
         <td>Tanggal Lahir :</td>
+        <!-- Type "date" ini membuat format tanggal dalam input box -->
         <td><input type="date" name="tl" required></td>
     </tr>
 
+    <!-- Row 5 -->
     <tr>
         <td>Email :</td>
+        <!-- Type "email" membuat user harus memasukkan elemen '@' dalam input box e-mail agar dinilai e-mail tersebut valid -->
         <td><input type="email" name="email" placeholder="Masukkan Alamat E-mail Anda" size="30" required></td>
     </tr>
 
+    <!-- Row 6 -->
     <tr>
         <td>Telepon :</td>
-        <td><input type="number" name="telp" maxlength="12" placeholder="Masukkan Nomor Telepon Anda" required></td>
+        <!-- Type "number" bertujuan agar input yang dimasukkan oleh user adalah berupa angka bukan huruf -->
+        <td><input type="number" name="telp" maxlength="12" placeholder="Masukkan Nomor Telepon Anda" required></td> <!---->
     </tr>
     
+    <!-- Row 7 -->
     <tr>
         <td></td>
+        <!-- Type "submit" untuk mengirimkan data yang sudah diisi -->
         <td><input type="submit" value="Buat Akun Saya"></td>
     </tr>
 </body>
