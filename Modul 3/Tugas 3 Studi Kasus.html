@@ -14,36 +14,41 @@
             <!-- Row 1 -->
             <tr>
                 <td>Nama </td>
-                <!-- Input nama yang harus diisi -->
+                <!-- Input nama yang harus diisi (hanya bisa diisi huruf dan spasi) dengan keterangan wajib diisi-->
                 <td> : <input type="text" name="nama" pattern="[A-Za-z ]+" placeholder="Nama" size="23" required> </td>
             </tr>
 
             <!-- Row 2 -->
             <tr>
                 <td>Usia</td>
+                <!-- Input usia yang harus diisi (usia minimal 17, dan maximal 30) dengan keterangan wajib diisi -->
                 <td> : <input type="number" min="17" max="30" name="usia" required> (Usia min 17-30)</td>
             </tr>
 
+            <!-- Row 3 -->
             <tr>
                 <td>Email</td>
+                <!-- Input email memasukkan elemen '@' dalam input box e-mail agar e-mail tersebut dinilai valid dengan keterangan wajib diisi -->
                 <td> : <input type="email" name="email" placeholder="nama_email@host.com" size="23" required></td>
             </tr>
 
             <tr>
                 <td>Web</td>
+                <!-- Input web menggunakan dengan jenis inputan hanya 'url' dengan keterangan wajib diisi -->
                 <td> : <input type="url" name="web" placeholder="http://" size="30" required></td>
             </tr>
 
             <tr>
                 <td>Password</td>
+                <!-- Input password menggunakan semua karakter (minimal 8 karakter) dengan keterangan wajib diisi -->
                 <td> : <input type="password" name="pass" minlength="8" placeholder="Semua karakter, min 8" size="20" required></td>
             </tr>
 
             <tr>
                 <td></td>
+                <!-- Input submit untuk mengirimkan semua inputan yang sudah diisi -->
                 <td>&nbsp; <input type="submit" value="Submit"></td>
             </tr>
-
         </table>
     </form>
 </body>
