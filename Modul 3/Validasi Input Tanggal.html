@@ -35,21 +35,30 @@
 
     <!-- Row 4 -->
     <tr>
+        <td>Tanggal Lahir:</td>
+        <!-- Placeholder digunakan untuk memberi keterangan pada input box-->
+        <!-- Type "date" ini membuat format tanggal dalam input box -->
+        <td><input type="date" name="tl" required></td> <!-- Required digunakan agar user tidak mengirim form dengan blank space (jadi tiap baris harus diisi) -->
+    </tr>
+    </tr>
+
+    <!-- Row 5 -->
+    <tr>
         <td>Email:</td>
         <!-- Placeholder digunakan untuk memberi keterangan pada input box-->
         <td><input type="text" name="email" placeholder="Masukkan Alamat E-mail Anda" required></td> <!-- Required digunakan agar user tidak mengirim form dengan blank space (jadi tiap baris harus diisi) -->
     </tr>
     </tr>
 
-    <!-- Row 5 -->
+    <!-- Row 6 -->
     <tr>
         <td>Telepon:</td>
         <!-- Placeholder digunakan untuk memberi keterangan pada input box-->
-        <td><input type="text" name="telp" placeholder="Masukkan Nomor Telepon Anda" required></td> <!-- Required digunakan agar user tidak mengirim form dengan blank space (jadi tiap baris harus diisi) -->
+        <td><input type="text" name="telp" maxlength="12" placeholder="Masukkan Nomor Telepon Anda" required></td> <!-- Required digunakan agar user tidak mengirim form dengan blank space (jadi tiap baris harus diisi) -->
     </tr>
     </tr>
     
-    <!-- Row 6 -->
+    <!-- Row 7 -->
     <tr>
         <td></td>
         <!-- Type "submit" untuk mengirimkan data yang sudah diisi -->
