@@ -5,6 +5,19 @@
 </head>
 <body>
     <h2>Studi Kasus: Validasi Input HTML5</h2>
-    
+
+    <form action="" method="post">
+        <table border="0">
+            <tr>
+                <td>Nama</td>
+                <td><input type="text" name="nama" pattern="[A-Za-z ]+" placeholder="Nama" required> </td>
+            </tr>
+
+            <tr>
+                <td>Usia</td>
+                <td><input type="number" min="17" max="30" name="usia" required>(Usia min 17-30)</td>
+            </tr>
+    </form>
+        </table>
 </body>
 </html>
