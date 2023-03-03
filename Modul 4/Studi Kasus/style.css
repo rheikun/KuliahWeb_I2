@@ -11,7 +11,7 @@ p{
 
 .circle1{
     background-color: #38686A;
-    border: 2px solid #A3B4A2;
+    border: 3px solid #A3B4A2;
     -moz-border-radius: 200px;
     -webkit-border-radius: 200px;
     text-align: center;
@@ -20,4 +20,13 @@ p{
     padding: 10px;
     height: 200px;
     width: 200px;
+}
+
+.roundedrect1{
+    background-color:#187795;
+    border: 3px solid #5e9711;
+    padding: 10px;
+    width: 300px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
