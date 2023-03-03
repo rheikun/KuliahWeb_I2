@@ -1,3 +1,4 @@
+/* Font Style */
 *{
     margin: 0;
     padding: 0;
@@ -5,10 +6,12 @@
     font-weight: bold;
 }
 
+/* Edit font color */
 p{
     color:#CDC6AE;
 }
 
+/* Style on Circle 1 */
 .circle1{
     background-color: #38686A;
     border: 3px solid #A3B4A2;
@@ -22,6 +25,7 @@ p{
     width: 200px;
 }
 
+/* Style on border corner */
 .roundedrect1{
     background-color:#187795;
     border: 3px solid #A3B4A2;
@@ -31,6 +35,7 @@ p{
     border-bottom-right-radius: 20px;
 }
 
+/* Style on border shadow */
 .shadowrect1{
     background-color: #38686A;
     border: 3px solid #A3B4A2;
