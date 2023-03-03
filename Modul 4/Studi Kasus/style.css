@@ -5,6 +5,19 @@
     font-weight: bold;
 }
 
+p{
+    color:#CDC6AE;
+}
+
 .circle1{
     background-color: #38686A;
+    border: 2px solid #A3B4A2;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+    height: 200px;
+    width: 200px;
 }
