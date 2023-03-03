@@ -24,9 +24,17 @@ p{
 
 .roundedrect1{
     background-color:#187795;
-    border: 3px solid #5e9711;
+    border: 3px solid #A3B4A2;
     padding: 10px;
     width: 300px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+.shadowrect1{
+    background-color: #38686A;
+    border: 3px solid #A3B4A2;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 8px 9px 5px #A3B4A2;
 }
