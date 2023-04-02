@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>The Pirate Bay</title>
+</head>
+<body>
+    <!-- Logo Piratebays -->
+    <a href="#" title="The Pirate Bay">
+    <p align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/904px-The_Pirate_Bay_logo.svg.png" width="280px" align="center" alt="">
+    </p>
+    </a>
+
+    <!-- navlinks  -->
+    <div class="navlinks">
+        <br>
+        <strong>Search Torrents</strong>
+        |
+        <a href="#" title="Browse Torrents" style="text-decoration: none;">Browse Torrents</a>
+        |
+        <a href="#" title="Recent Torrents" style="text-decoration: none;">Recent Torrents</a>
+        |
+        <a href="#" title="Top 100" style="text-decoration: none;">Top 100</a>
+    </div>
+
+    <!-- Form -->
+    <form method="get" action="#">
+        <!-- Search -->
+        <div class="input">
+            <input style="background-color:#ffffe0; background-image: url('https://cdn-icons-png.flaticon.com/512/1828/1828471.png'); 
+            background-repeat: no-repeat; background-position: right center; background-size: 12px 12px;" 
+            type="search" title="Pirate Search" placeholder="Pirate Search" size="48" required >
+        </div>
+
+        <!-- Checkbox -->
+        <div class="checkbox">
+            <label title="All"><input id="all" onclick="setAll();" type="checkbox" checked="">All</label>
+            <label title="Audio" style="margin-left: 3px;"><input name="audio" id="audio" onclick="rmAll();" type="checkbox">Audio</label>
+            <label title="Video" style="margin-left: 3px;"><input name="video" id="video" onclick="rmAll();" type="checkbox">Video</label>
+            <label title="Applications" style="margin-left: 3px;"><input name="apps" id="apps" onclick="rmAll();" type="checkbox">Applications</label>
+            <label title="Games" style="margin-left: 3px;"><input name="games" id="games" onclick="rmAll();" type="checkbox">Games</label>
+            <label title="Other" style="margin-left: 3px;"><input name="other" id="other" onclick="rmAll();" type="checkbox">Other</label>
+        </div>
+
+    <!-- Submit Button -->
+        <div class="submit">
+            <input type="submit" title="Pirate Search" value="Pirate Search" >
+        </div>
+    </form>
+
+    <!-- Lower -->
+    <center><strong class="lower">
+        <a href="#" title="The Pirate Bay" style="text-decoration: none;">ThePirateBay</a>
+</body>
+</html>
