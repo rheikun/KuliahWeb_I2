@@ -6,7 +6,7 @@
 }
 
 .navlinks{
-    font-size: 11px;
+    font-size: 13px;
     text-align: center;
     font-style: normal;
 }
@@ -18,8 +18,8 @@
 
 input[type=search] {
     border-color: (rgb(118, 118, 118), rgb(133, 133, 133));
-    width: 370px;
-    height: 25px;
+    width: 400px;
+    height: 20px;
 }
 
 .checkbox{
@@ -37,11 +37,11 @@ input[type=search] {
     font-size: 13px;
     text-align: center;
     text-decoration: none;
+    margin-top: 12px;
 }
 
 center {
-    margin-top: 9px;
-    
+    margin-top: 12px;
 }
 
 
