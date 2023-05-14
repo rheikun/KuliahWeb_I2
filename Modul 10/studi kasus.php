@@ -1,25 +1,25 @@
 <?php
     session_start(); // memulai session
     // ketika tombol logout ditekan
-    if (isset($_POST['logout'])) {
-        unset($_SESSION);
-        session_destroy();          // menghancurkan sesi login
+    if (isset($_POST['logout'])) { // Memeriksa apakah variabel POST 'logout' di-set atau tidak
+        unset($_SESSION); // Menghapus semua data yang tersimpan dalam variabel session
+        session_destroy();  // Menghancurkan sesi yang sedang berjalan
         echo "<p align=center> Anda telah berhasil Log Out.";
         echo "<p align=center> Silakan klik <a href='studi kasus.php'>disini</a> untuk login lagi.</p>";
         exit;
     }
     // setelah form diisi
-    if (isset($_POST['username']) || isset($_POST['password'])) { 
-        // apabila username dan password sesuai
+    if (isset($_POST['username']) || isset($_POST['password'])) { // Memeriksa apakah variabel POST 'username' atau 'password' di-set atau tidak
+        // Apabila username dan password sesuai
         if ($_POST['username'] === "username" && $_POST['password'] === "password") {
-            // masuk ke halaman selanjutnya, yaitu Home Page
-            if (!isset($_SESSION['login'])) { ?>
+             // Membuka halaman Home Page jika tidak ada session login yang aktif
+            if (!isset($_SESSION['login'])) { ?> 
                 <html lang="en">
                 <head>
                     <title>Home Page</title>
                 </head>
                 <body>
-                <h2>Anggap ini Home Page</h2>
+                <h2 align=center>Anggap ini Home Page</h2>
                     <form method="post">
                         <input type="submit" name="logout" value="Log Out">
                     </form>
