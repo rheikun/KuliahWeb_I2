@@ -27,8 +27,8 @@
                 </html> <?php
             }
         } else { // jika username dan password tidak sesuai
-            echo "<p align=center> <size=7px> Login gagal. Mohon periksa Username dan/atau Password Anda.</size=7px>";
-            echo "<p align=center> <size=7px> Silakan klik <a href='studi kasus.php'>disini</a> untuk login lagi.</size=7px></p>";
+            echo "<p align=center> <size=9px> Login gagal. Mohon periksa Username dan/atau Password Anda.</size=9px>";
+            echo "<p align=center> <size=9px> Silakan klik <a href='studi kasus.php'>disini</a> untuk login lagi.</size=9px></p>";
         }
     } else { ?>
 
