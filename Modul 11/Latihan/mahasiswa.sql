@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2023 at 07:21 PM
+-- Generation Time: May 23, 2023 at 04:16 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `mahasiswa` (
-  `ID` int(11) NOT NULL,
-  `NIM` varchar(12) NOT NULL,
-  `NAMA` varchar(50) NOT NULL,
-  `ALAMAT` text NOT NULL
+  `ID` int(10) NOT NULL,
+  `NIM` varchar(50) NOT NULL,
+  `Nama` varchar(100) NOT NULL,
+  `Alamat` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -52,7 +52,7 @@ ALTER TABLE `mahasiswa`
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
