@@ -19,7 +19,7 @@
     <?php
     include "koneksi.php";
     $nim = $_GET['nim'];
-    $data = mysqli_query($koneksi, "SELECT * from mahasiswa WHERE NIM='$nim'") or die();
+    $data = mysqli_query($koneksi, "SELECT * FROM mahasiswa WHERE NIM='$nim'") or die(mysqli_error($koneksi));
     $no = 1;
     while($d = mysqli_fetch_array($data)) {
         ?>
@@ -28,7 +28,7 @@
                 <tr>
                     <td>Nama</td>
                     <td>
-                        <input type="hidden" name="nim" value="<?php echo $d['NIM'] ?>">
+                        <input type="hidden" name="NIM" value="<?php echo $d['NIM'] ?>">
                         <input type="text" name="Nama" value="<?php echo $d['NAMA'] ?>">
                     </td>
                 </tr>
