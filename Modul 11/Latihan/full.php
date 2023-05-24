@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Latihan 1</title>
+    <title>Data Mahasiswa</title>
 </head>
 
 <body>
