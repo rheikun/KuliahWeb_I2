@@ -70,7 +70,7 @@
                 <div class="card mx-auto">
                     <div class="card-body p-5">
                         <h3 class="text-center mb-4"><strong>Data Mahasiswa</strong></h3>
-                        <p style="color: #1C6E8C; text-align: center;">Masukkan NIM, Nama dan Alamat lalu klik "Tambahkan"</p>
+                        <p style="color: #1C6E8C; text-align: center;">Masukkan NIM, Nama, dan Alamat lalu klik "Tambahkan"</p>
                         <br>
                         <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
                             <div class="form-floating mb-3">
@@ -103,11 +103,11 @@
     <h5 align="center">Menampilkan Data Mahasiswa</h5>
     <table border="1" align="center" cellspacing="10" cellpadding="15">
         <tr>
-            <th width="20">No</th>
-            <th width="100">NIM</th>
-            <th width="200">Nama</th>
-            <th width="200">Alamat</th>
-            <th width="80">Menu</th>
+            <th width="25" style="text-align: center;">No</th>
+            <th width="150" style="text-align: center;">NIM</th>
+            <th width="250" style="text-align: center;">Nama</th>
+            <th width="250" style="text-align: center;">Alamat</th>
+            <th width="100" style="text-align: center;">Menu</th>
         </tr>
         <?php
         include ("koneksi.php");
