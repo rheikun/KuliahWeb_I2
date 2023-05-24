@@ -46,7 +46,8 @@
                     <title>Home Page</title>
                 </head>
                 <body>
-                <div class="container p-5 vertical-center">     <!-- Mengatur container -->
+                <!-- Mengatur container -->
+                <div class="container p-5 vertical-center">    
                     <div class="row">
                     <div class="card mx-auto">
                     <div class="card-body p-5">
@@ -126,11 +127,11 @@
                 <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" onsubmit="return validateForm()">
                     <div class="container text-center">
                         <div>
-                            <p style="text-align: left; color:#5F7D95;">Email</p>
+                            <p style="text-align: left; color:#274156;">Email</p>
                             <input class="form-control" type="text" name="email" id="email" style="margin-bottom: 10px;">
                         </div>
                         <div>
-                            <p style="text-align: left; color:#5F7D95;">Password</p>
+                            <p style="text-align: left; color:#274156;">Password</p>
                             <input class="form-control" type="password" name="password" id="password">
                         </div>
                     </div>
