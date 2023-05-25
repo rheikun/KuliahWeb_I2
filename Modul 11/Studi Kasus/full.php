@@ -60,6 +60,9 @@
                 return;
             }
         }
+        function confirmAdd() {
+            return confirm("Apakah Anda yakin akan menambahkan data?");
+        }
     </script>
 </head>
 
@@ -91,7 +94,7 @@
                                 <input type="text" class="form-control bg-custom" name="ALAMAT">
                             </div>
                             <br>
-                            <button type="submit" class="btn btn-primary btn-block mb-3">Tambahkan</button>
+                            <button type="submit" class="btn btn-primary btn-block mb-3" onclick="confirmAdd()">Tambahkan</button>
                         </form>
                     </div>
                 </div>
