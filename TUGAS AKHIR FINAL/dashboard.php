@@ -16,7 +16,7 @@
     <a href="logout.php" class="btn btn-outline-light mt-4" onclick="return confirm('Apakah Anda yakin ingin logout?')">Logout</a>
     </header>
     <br>
-    <table class="table table-striped">
+    <table class="table table-striped" style="background-color: rgba(200, 255, 255, 0.1);">
         <thead>
             <tr>
                 <th style="text-align: center;" scope="col">No.</th>
