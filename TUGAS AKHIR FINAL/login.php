@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+// Memeriksa apakah form login telah disubmit
 if (isset($_POST['submit'])) {
     $email = $_POST['Email'];
     $password = $_POST['Password'];
@@ -10,14 +11,18 @@ if (isset($_POST['submit'])) {
         die('koneksi gagal: ' . mysqli_connect_error());
     }
 
+    // Membuat query untuk memeriksa kecocokan email dan password di tabel admin
     $query = "SELECT * FROM admin WHERE Email = '$email' AND Password = '$password'";
     $result = mysqli_query($koneksi, $query);
 
+    // Memeriksa jumlah baris hasil query
     if (mysqli_num_rows($result) == 1) {
+        // Jika ditemukan satu baris, berarti login berhasil
         $_SESSION['Email'] = $email;
         header("Location: dashboard.php");
         exit();
     } else {
+        // Jika tidak ditemukan baris yang cocok, berarti login gagal
         header("Location: login.php?error=1");
         exit();
     }
@@ -40,21 +45,27 @@ if (isset($_POST['submit'])) {
         <section>
             <div class="container">
                 <div class="top">
-                    <header> Log in </header>
+                    <!-- Judul Form Login -->
+                    <header> Account Login </header>
                 </div>
+                <!-- Form login -->
                 <form id="login-form" method="POST" action="">
                     <div class="input-field">
+                        <!-- Input Email -->
                         <input type="text" class="input" name="Email" placeholder="Email" id="email">
                         <i class='bx bx-user'></i>
                     </div>
                     <div class="input-field">
+                        <!-- Input Password -->
                         <input type="password" class="input" name="Password" placeholder="Password" id="password">
                         <i class='bx bx-lock-alt'></i>
                     </div>
                     <div class="input-field">
+                        <!-- Tombol Submit -->
                         <input type="submit" class="submit" name="submit" value="Login">
                     </div>
                 </form>
+                <!-- Pesan kesalahan jika login gagal -->
                 <?php
                 if (isset($_GET['error']) && $_GET['error'] == 1) {
                     echo '<p style="color: red;">Email atau password salah</p>';
