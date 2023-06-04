@@ -31,6 +31,7 @@ if (isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,6 +40,7 @@ if (isset($_POST['submit'])) {
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Tugas Akhir</title>
 </head>
+
 <body>
     <div class="box">
         <video id="bg-video" src="bglogin.mp4" loop muted autoplay></video>
@@ -75,4 +77,5 @@ if (isset($_POST['submit'])) {
         </section>
     </div>
 </body>
+
 </html>
