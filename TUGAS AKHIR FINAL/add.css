@@ -58,20 +58,6 @@
     flex-grow: 1;
 }
 
-.input-group {
-    display: flex;
-}
-
-.input-number {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: -1px;
-}
-.button-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .custom-button {
     border: 2px solid white !important;
     height: 45px !important;
