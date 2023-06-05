@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
 
 <body>
     <div class="box">
-        <video id="bg-video" src="bgregist.mp4" loop muted autoplay></video>
+        <video id="bg-video" src="bg1.mp4" loop muted autoplay></video>
         <section>
             <div class="container">
                 <div class="top">

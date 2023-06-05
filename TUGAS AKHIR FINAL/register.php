@@ -57,10 +57,10 @@ if (isset($_POST['register'])) {
         <section>
             <div class="container">
                 <div class="top">
-                    <!-- Judul Form Login -->
+                    <!-- Judul Form Register -->
                     <header> Create an Account </header>
                 </div>
-                <!-- Form login -->
+                <!-- Form Register -->
                 <form id="login-form" method="POST" action="">
                     <div class="input-field">
                         <!-- Input Email -->
