@@ -1,25 +1,27 @@
 <?php
 session_start();
 
+$error = "";
+
 if (isset($_POST['register'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $email = $_POST['Email'];
+    $password = $_POST['Password'];
 
     // Koneksi ke database
-    $koneksi = mysqli_connect("localhost", "root", "", "db_buku");
+    $koneksi = mysqli_connect("localhost", "root", "", "db_tugasakhir1");
     if (!$koneksi) {
         die("Koneksi gagal: " . mysqli_connect_error());
     }
 
-    // Mengecek apakah username sudah terdaftar
-    $checkQuery = "SELECT * FROM user WHERE username = '$username'";
+    // Mengecek apakah email sudah terdaftar
+    $checkQuery = "SELECT * FROM admin WHERE Email = '$email'";
     $checkResult = mysqli_query($koneksi, $checkQuery);
     if (mysqli_num_rows($checkResult) > 0) {
-        // Jika username sudah terdaftar, tampilkan pesan kesalahan
-        echo "Username sudah terdaftar. Silakan gunakan username lain.";
+        // Jika email sudah terdaftar, simpan pesan kesalahan
+        $error = "Email sudah terdaftar. Silakan gunakan email lain yang belum terdaftar.";
     } else {
-        // Jika username belum terdaftar, lakukan proses registrasi
-        $insertQuery = "INSERT INTO user (username, password) VALUES ('$username', '$password')";
+        // Jika email belum terdaftar, lakukan proses registrasi
+        $insertQuery = "INSERT INTO admin (Email, Password) VALUES ('$email', '$password')";
         $insertResult = mysqli_query($koneksi, $insertQuery);
 
         if ($insertResult) {
@@ -27,8 +29,8 @@ if (isset($_POST['register'])) {
             header("Location: login.php");
             exit();
         } else {
-            // Registrasi gagal, tampilkan pesan kesalahan
-            echo "Registrasi gagal. Silakan coba lagi.";
+            // Registrasi gagal, simpan pesan kesalahan
+            $error = "Registrasi gagal. Silakan coba lagi.";
         }
     }
 
@@ -36,3 +38,52 @@ if (isset($_POST['register'])) {
     mysqli_close($koneksi);
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Tugas Akhir</title>
+</head>
+
+<body>
+    <div class="box">
+        <video id="bg-video" src="bg2.mp4" loop muted autoplay></video>
+        <section>
+            <div class="container">
+                <div class="top">
+                    <!-- Judul Form Login -->
+                    <header> Create an Account </header>
+                </div>
+                <!-- Form login -->
+                <form id="login-form" method="POST" action="">
+                    <div class="input-field">
+                        <!-- Input Email -->
+                        <input type="text" class="input" name="Email" placeholder="Email" id="email">
+                        <i class='bx bx-user'></i>
+                    </div>
+                    <div class="input-field">
+                        <!-- Input Password -->
+                        <input type="password" class="input" name="Password" placeholder="Password" id="password">
+                        <i class='bx bx-lock-alt'></i>
+                    </div>
+                    <div class="input-field">
+                        <!-- Tombol Submit -->
+                        <input type="submit" class="submit" name="register" value="Register">
+                    </div>
+                    <!-- Pesan kesalahan jika terdapat error -->
+                    <?php if (!empty($error)): ?>
+                        <p style="color: red;"><?php echo $error; ?></p>
+                    <?php endif; ?>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

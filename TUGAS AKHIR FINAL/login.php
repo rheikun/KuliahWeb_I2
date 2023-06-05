@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['Email'];
     $password = $_POST['Password'];
 
-    $koneksi = mysqli_connect('localhost', 'root', '', 'db_tugasakhir');
+    $koneksi = mysqli_connect('localhost', 'root', '', 'db_tugasakhir1');
     if (!$koneksi) {
         die('koneksi gagal: ' . mysqli_connect_error());
     }
@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
     // Memeriksa jumlah baris hasil query
     if (mysqli_num_rows($result) == 1) {
         // Jika ditemukan satu baris, berarti login berhasil
-        $_SESSION['Email'] = $email;
+        $_SESSION['submit'] = $email;
         header("Location: dashboard.php");
         exit();
     } else {
@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
 
 <body>
     <div class="box">
-        <video id="bg-video" src="bglogin.mp4" loop muted autoplay></video>
+        <video id="bg-video" src="bgregist.mp4" loop muted autoplay></video>
         <section>
             <div class="container">
                 <div class="top">

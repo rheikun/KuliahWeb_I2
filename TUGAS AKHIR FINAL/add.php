@@ -50,10 +50,10 @@ if (isset($_POST['submit_data'])) { //Memeriksa apakah tombol dengan atribut nam
 </head>
 
 <body>
-    <video id="bg-video" src="bgvid.mp4" loop muted autoplay></video>
+    <video id="bg-video" src="bgyellow.mp4" loop muted autoplay></video>
     <div class="box">
         <div class="content">
-                <div class="container p-5 vertical-center"> <!-- Mengatur container -->
+                <div class="container"> <!-- Mengatur container -->
                     <div class="row">
                         <div class="card mx-auto">
                             <div class="card-body p-5">
@@ -69,7 +69,7 @@ if (isset($_POST['submit_data'])) { //Memeriksa apakah tombol dengan atribut nam
                                     <br>
                                     <div class="form-floating mb-3">
                                         <!-- Membuat tempat input -->
-                                        <label for="Nama" style="font-size: 16px;">Nama</label>
+                                        <label for="Nama" style="font-size: 16px; ">Nama</label>
                                         <input type="text" class="form-control oval-input" name="Nama" placeholder="Nama">
                                     </div>
                                     <br>
@@ -87,7 +87,7 @@ if (isset($_POST['submit_data'])) { //Memeriksa apakah tombol dengan atribut nam
                                     <br>
                                     <div class="form-floating mb-3">
                                         <!-- Membuat tempat input -->
-                                        <label for="StatusMhs" style="font-size: 16px;">Status Mahasiswa</label>
+                                        <label for="StatusMhs" style="font-size: 16px;" >Status Mahasiswa</label>
                                         <input type="text" class="form-control oval-input" name="StatusMhs" placeholder="Aktif atau Tidak Aktif">
                                     </div>
                                     <br>
