@@ -19,6 +19,7 @@
     <?php
     include "koneksi.php";
 
+    // Memeriksa jika metode permintaan adalah POST
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nim = $_POST['NIM'];
         $nama = $_POST['Nama'];
@@ -31,7 +32,7 @@
         $updateQuery = "UPDATE mahasiswa SET Nama='$nama', Prodi='$prodi', Gender ='$gender', StatusMhs='$statusmhs', Alamat='$alamat' WHERE NIM='$nim'";
         mysqli_query($koneksi, $updateQuery) or die(mysqli_error($koneksi));
 
-        // Mengalihkan ke dashboardlagi
+        // Mengalihkan ke dashboard lagi
         header("Location: dashboard.php");
         exit();
     }
@@ -97,7 +98,8 @@
             </div>
         </div>
     </div>
-    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 

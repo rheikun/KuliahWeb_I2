@@ -66,6 +66,10 @@ if (isset($_POST['submit'])) {
                         <!-- Tombol Submit -->
                         <input type="submit" class="submit" name="submit" value="Login">
                     </div>
+                    <div class="or-text">
+                        <span>or</span>
+                    </div>
+                    <a href="register.php" class="my-link">Create an Account</a>
                 </form>
                 <!-- Pesan kesalahan jika login gagal -->
                 <?php

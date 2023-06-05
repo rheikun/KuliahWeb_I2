@@ -1,24 +1,22 @@
 <?php
-// Proses tambah buku
-if (isset($_POST['submit_data'])) {
-    // Ambil data dari form
-    $nim = $_POST['NIM'];
-    $nama = $_POST['Nama'];
-    $prodi = $_POST['Prodi'];
-    $gender = $_POST['Gender'];
-    $statusmhs = $_POST['StatusMhs'];
-    $alamat = $_POST['Alamat'];
+if (isset($_POST['submit_data'])) { //Memeriksa apakah tombol dengan atribut name="submit_data" telah dikirim dalam permintaan POST
+    $nim = $_POST['NIM']; //Mengambil nilai yang dikirim melalui metode POST dengan nama elemen 'NIM' dari formulir yang dikirim
+    $nama = $_POST['Nama']; //Mengambil nilai yang dikirim melalui metode POST dengan nama elemen 'Nama' dari formulir yang dikirim
+    $prodi = $_POST['Prodi']; //Mengambil nilai yang dikirim melalui metode POST dengan nama elemen 'Prodi' dari formulir yang dikirim
+    $gender = $_POST['Gender']; //Mengambil nilai yang dikirim melalui metode POST dengan nama elemen 'Gender' dari formulir yang dikirim
+    $statusmhs = $_POST['StatusMhs']; //Mengambil nilai yang dikirim melalui metode POST dengan nama elemen 'StatusMhs' dari formulir yang dikirim
+    $alamat = $_POST['Alamat']; //Mengambil nilai yang dikirim melalui metode POST dengan nama elemen 'Alamat' dari formulir yang dikirim
+
 
     // Koneksi ke database
     $koneksi = mysqli_connect("localhost", "root", "", "db_tugasakhir1") or die("Koneksi gagal");
 
-    // Query tambah buku
+    // Query tambah mahasiswa
     $query = "INSERT INTO mahasiswa (NIM, Nama, Prodi, Gender, StatusMhs, Alamat) VALUES ('$nim', '$nama', '$prodi', '$gender', '$statusmhs', '$alamat')";
 
     // Eksekusi query
     $result = mysqli_query($koneksi, $query);
 
-    // Cek jika proses tambah buku berhasil
     // Cek jika proses tambah data berhasil
     if ($result) {
         // Redirect ke homepage.php dengan parameter success
@@ -42,8 +40,6 @@ if (isset($_POST['submit_data'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="add.css" type="text/css">
     <title>Menambahkan Data</title>
     <script>
@@ -114,6 +110,8 @@ if (isset($_POST['submit_data'])) {
                 </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

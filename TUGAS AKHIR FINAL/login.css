@@ -32,8 +32,8 @@ section {
 }
 
 .container {
-    width: 350px;
-    height: 350px;
+    width: 380px;
+    height:380px;
     display: flex;
     flex-direction: column;
     padding: 0 15px 0 15px;
@@ -68,6 +68,34 @@ i {
     top: -33px;
     left: 17px;
     color: azure;
+}
+
+.or-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.or-text::before,
+.or-text::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: #000;
+    margin: 0 10px;
+}
+
+.my-link {
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 113px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.my-link:hover {
+    background-color: #0056b3;
 }
 
 ::-webkit-input-placeholder{
